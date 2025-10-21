@@ -3,7 +3,7 @@
 //张嘉鑫
 #include <stdio.h>
 int main()
-{
+{   
     float a,b;
     printf("输入摄氏温度");
     scanf("%f",&a);
