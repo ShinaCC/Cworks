@@ -9,11 +9,11 @@ int main()
     scanf("%d %d %d",&a,&b,&c);
     if(a+b>c && a+c>b && b+c>a)
     {
-        printf("满足条件");
+        printf("可以组成三角形");
     }
     else
     {
-        printf("未满足条件");
+        printf("不能组成三角形");
     }
 return 0;
 }
