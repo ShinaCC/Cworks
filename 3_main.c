@@ -4,30 +4,29 @@
 #include <stdio.h>
 int main()
 {
-    int a,b;
-    char c;
-    printf("输入两个数和一个运算符（空格分割）");
-    scanf("%d %d %c",&a,&b,&c);    
-    switch(c)
+    int n;
+    scanf ("%d", &n);
+     if (n <= 1 || n >= 50) {
+        printf("密钥不安全，请重新输入\n");
+    }
+    else{
+    int i = 1;
+    int a = 2;
+    while (a < n)
     {
-    case '+':
-        printf("结果为：%d",a+b);
+        if(n % a == 0){
+        i = 0;
         break;
-    case '-':
-        printf("结果为：%d",a-b);
-        break;
-    case '*':
-        printf("结果为：%d",a*b);   
-        break;
-    case '/':
-        if(b != 0) 
-            printf("结果为：%d",a/b);
-        else
-            printf("错误：除数不能为零"); 
-        break;
-    default:
-        printf("错误：无效的运算符");    
+        }
+        a++;
+    }
 
-}
+    if(i)  {
+        printf("密钥安全，密码设置成功\n");
+    }
+    else {
+        printf("密钥不安全，请重新输入\n");
+    }
+    }
     return 0;
 }
