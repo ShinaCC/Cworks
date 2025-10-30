@@ -6,10 +6,10 @@ int main()
 {
     int n;
     scanf ("%d", &n);
-     if (n <= 0 || n >= 50) {
+     if (n <= 0 || n >= 50 || n == 1) {
         printf("密钥不安全，请重新输入\n");
-        return 0;
     }
+    else{
     int i = 1;
     for (int a = 2;a < n;a++)
     {
@@ -24,6 +24,7 @@ int main()
     }
     else {
         printf("密钥不安全，请重新输入\n");
+    }
     }
     return 0;
 }
