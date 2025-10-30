@@ -3,11 +3,23 @@
 //张嘉鑫
 #include <stdio.h>
 int main()
-{   
-    float a,b;
-    printf("输入摄氏温度");
-    scanf("%f",&a);
-    b = a*9/5 + 32;
-    printf("华氏温度为：%.1f",b);
+{
+    int n;
+    scanf ("%d", &n);
+    int i = 1;
+    for (int a = 2;a < n;a++)
+    {
+        if(n %a == 0){
+        i = 0;
+        break;
+        }
+    }
+
+    if(i)  {
+        printf("密钥安全，密码设置成功\n");
+    }
+    else {
+        printf("密钥不安全，请重新输入\n");
+    }
     return 0;
 }
