@@ -4,18 +4,22 @@
 #include <stdio.h>
 int main()
 {
-    int s;
-    printf("输入成绩：");
-    scanf("%d",&s);
-    if(s >= 90)
-        printf("等级为:A");
-    else if(s>= 80)
-        printf("等级为:B");
-    else if(s>= 70)
-        printf("等级为:C");
-    else if(s >= 60)
-        printf("等级为:D");
-    else
-        printf("等级为:E");
-    return 0;
+    int num, hundreds, tens, units;
+    int blank = 0;
+    for(num=100;num<=999;num++)
+    {
+        hundreds = num / 100;
+        tens = (num / 10) % 10;
+        units = num % 10;
+    if (hundreds * hundreds * hundreds + 
+            tens * tens * tens + 
+            units * units * units == num)   {
+                if(blank > 0){
+                    printf(" ");
+                }
+            
+            printf("%d", num);
+            blank++;
+            }
+    }
 }
