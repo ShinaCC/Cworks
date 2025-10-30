@@ -6,6 +6,10 @@ int main()
 {
     int n;
     scanf ("%d", &n);
+     if (n <= 0 || n >= 50) {
+        printf("密钥不安全，请重新输入\n");
+        return 0;
+    }
     int i = 1;
     for (int a = 2;a < n;a++)
     {
