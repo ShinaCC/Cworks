@@ -10,7 +10,6 @@ int main()
     {
         scanf("%d", &arr[i]);
         sum += arr[i];
-
     }
     arr[4] = sum;
     for(i = 0; i < 5; i++)
