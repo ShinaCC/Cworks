@@ -4,16 +4,24 @@
 #include <stdio.h>
 int main()
 {
-    int a,b,c;
-    printf("输入三个整数");
-    scanf("%d %d %d",&a,&b,&c);
-    if(a+b>c && a+c>b && b+c>a)
+    int hundreds, tens, units;
+    int blank = 0;
+    int num = 100;
+    while(num<=999)
     {
-        printf("可以组成三角形");
+        hundreds = num / 100;
+        tens = (num / 10) % 10;
+        units = num % 10;
+    if (hundreds * hundreds * hundreds + 
+            tens * tens * tens + 
+            units * units * units == num)   {
+                if(blank > 0){
+                    printf(" ");
+                }
+            
+            printf("%d", num);
+            blank++;
+            }
+        num++;
     }
-    else
-    {
-        printf("不能组成三角形");
-    }
-return 0;
 }
