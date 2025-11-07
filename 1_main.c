@@ -2,29 +2,21 @@
 //3531783828@qq.com
 //张嘉鑫
 #include <stdio.h>
-int main()
-{
-    int n;
-    scanf ("%d", &n);
-     if (n <= 0 || n >= 50 || n == 1) {
-        printf("密钥不安全，请重新输入\n");
-    }
-    else{
-    int i = 1;
-    for (int a = 2;a < n;a++)
-    {
-        if(n %a == 0){
-        i = 0;
-        break;
+int main() {
+    int matrix[3][3];
+    int i, j;
+    printf("请输入3×3矩阵（每行3个整数，空格分隔）：\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matrix[i][j]);
         }
     }
-
-    if(i)  {
-        printf("密钥安全，密码设置成功\n");
-    }
-    else {
-        printf("密钥不安全，请重新输入\n");
-    }
+    printf("\n输出结果：\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", matrix[i][j]); 
+        }
+        printf("\n"); 
     }
     return 0;
 }
