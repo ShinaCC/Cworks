@@ -2,23 +2,12 @@
 //3531783828@qq.com
 //张嘉鑫
 #include <stdio.h>
-int main()
-{
-    int arr[5];
-    int i, sum = 0;
-    for(i = 0; i < 4; i++)
-    {
-        scanf("%d", &arr[i]);
-        sum += arr[i];
-    }
-    arr[4] = sum;
-    for(i = 0; i < 5; i++)
-    {
-        if (i > 0)
-        {
-            printf(" ");
-        }
-        printf("%d", arr[i]);
-    }
-return 0;
+int arithmetic_series_sum(int a1, int an, int step) {
+    int n = (an - a1) / step + 1;
+    return (a1 + an) * n / 2;
+}
+int main() {
+    int result = arithmetic_series_sum(1, 100, 1);
+    printf("%d\n", result);
+    return 0;
 }
