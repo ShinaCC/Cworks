@@ -2,24 +2,25 @@
 //3531783828@qq.com
 //张嘉鑫
 #include <stdio.h>
-int main()
-{
-    int num, hundreds, tens, units;
-    int blank = 0;
-    for(num=100;num<=999;num++)
-    {
-        hundreds = num / 100;
-        tens = (num / 10) % 10;
-        units = num % 10;
-    if (hundreds * hundreds * hundreds + 
-            tens * tens * tens + 
-            units * units * units == num)   {
-                if(blank > 0){
-                    printf(" ");
-                }
-            
-            printf("%d", num);
-            blank++;
-            }
+int main() {
+    int matrix[3][3];
+    int transpose[3][3];
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
     }
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
 }
