@@ -11,6 +11,7 @@ int main() {
         }
     }
     for (i = 0; i < 3; i++) {
+        printf("%d",matrix[i][0]);
         for (j = 0; j < 3; j++) {
             printf(" %d", matrix[i][j]); 
         }
