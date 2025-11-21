@@ -3,19 +3,11 @@
 //张嘉鑫
 #include <stdio.h>
 int main() {
-    int matrix[3][3];
-    int i,j;
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            scanf("%d", &matrix[i][j]);
-        }
-    }
-    for (i = 0; i < 3; i++) {
-        printf("%d",matrix[i][0]);
-        for (j = 1; j < 3; j++) {
-            printf(" %d", matrix[i][j]); 
-        }
-        printf("\n"); 
-    }
+    int a;
+    scanf("%d", &a);
+    int *p = &a;
+    *p = *p + 10;
+    printf("%d,%d\n", a, *p);
     return 0;
 }
+
